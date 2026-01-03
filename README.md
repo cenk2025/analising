@@ -1,211 +1,189 @@
-# Financial Analysis Dashboard
+# 📊 FinanceIQ - Premium Financial Dashboard
 
-A comprehensive, interactive financial data visualization dashboard built with Next.js, featuring AI-powered insights and beautiful charts.
+Modern, güvenli ve kullanıcı dostu bir finansal analiz platformu. Next.js 15, TypeScript, Supabase ve Recharts kullanılarak geliştirilmiştir.
 
-![Dashboard Preview](https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=for-the-badge&logo=tailwind-css)
+## ✨ Özellikler
 
-## 🚀 Features
+### 🔐 Güvenlik
+- **Supabase Authentication**: Güvenli kullanıcı kimlik doğrulama
+- **Protected Routes**: Middleware ile korunan dashboard sayfaları
+- **Session Management**: Otomatik oturum yönetimi
+- **Secure Logout**: Güvenli çıkış işlemi
 
-- **📊 Interactive Charts**: Line graphs, bar charts, and treemaps for financial metrics visualization
-- **💡 AI-Powered Insights**: NLP analysis of management discussions, risks, and opportunities
-- **📈 Financial Metrics**: Track revenue, EBITDA, PAT, EPS, profit margins, ROCE, and debt ratios
-- **🎯 Segment Analysis**: Visualize segment-wise performance with interactive treemaps
-- **🎨 Premium Dark Theme**: Modern glassmorphism design with vibrant gradients
-- **📱 Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **⚡ Real-time Updates**: Fast, interactive dashboard with smooth animations
+### 📈 Dashboard Özellikleri
+1. **Genel Bakış**
+   - Toplam Gelir, EBITDA, Net Kar, EPS metrikleri
+   - 5 yıllık gelir trendi grafiği
+   - EBITDA gelişim grafiği
+   - Yönetici özeti
 
-## 📋 Key Metrics Tracked
+2. **Finansal Metrikler**
+   - ROCE (Return on Capital Employed)
+   - Borç/Özkaynak oranı
+   - Net Kar (PAT) trend grafiği
+   - Hisse Başı Kazanç (EPS) trend grafiği
 
-- Revenue Growth (5-year trends)
-- EBITDA & PAT
-- Earnings Per Share (EPS)
-- Profit Margins
-- Return on Capital Employed (ROCE)
-- Debt-to-Equity Ratios
-- Segment-wise Revenue Distribution
+3. **Segment Analizi**
+   - İş birimi bazlı performans
+   - Gelir, büyüme oranı ve kar marjı metrikleri
+   - Consulting Services, Cloud Infrastructure, Data Analytics segmentleri
 
-## 🛠️ Tech Stack
+4. **AI İçgörüler**
+   - Stratejik odak alanları
+   - Risk analizi
+   - Fırsat değerlendirmesi
+   - Dijital dönüşüm önerileri
 
-- **Framework**: Next.js 16.1 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **Charts**: Recharts
-- **Database**: Supabase
-- **Deployment**: Vercel
-- **NLP**: Natural language processing for sentiment analysis
+### 🎨 Tasarım
+- **Premium Dark Theme**: Modern ve profesyonel koyu tema
+- **Responsive Design**: Tüm cihazlarda mükemmel görünüm
+- **Smooth Animations**: Akıcı geçişler ve animasyonlar
+- **Glassmorphism Effects**: Modern cam efektleri
+- **Gradient Accents**: Canlı renk geçişleri
+- **Interactive Charts**: Recharts ile etkileşimli grafikler
 
-## 📦 Installation
+## 🚀 Kurulum
 
-1. Clone the repository:
-```bash
-git clone https://github.com/cenk2025/analising.git
-cd analising
-```
+### Gereksinimler
+- Node.js 18+ 
+- npm veya yarn
 
-2. Install dependencies:
+### Adımlar
+
+1. **Bağımlılıkları yükleyin:**
 ```bash
 npm install
 ```
 
-3. Set up environment variables:
-Create a `.env.local` file in the root directory:
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-```
+2. **Supabase Yapılandırması:**
+   - Proje zaten yapılandırılmış durumda
+   - Credentials: `lib/supabase.ts` dosyasında
 
-4. Run the development server:
+3. **Geliştirme sunucusunu başlatın:**
 ```bash
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. **Tarayıcıda açın:**
+   - URL: http://localhost:3000
+   - Otomatik olarak login sayfasına yönlendirileceksiniz
 
-## 🚢 Deployment to Vercel
+## 👤 Test Kullanıcısı
 
-### Quick Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/cenk2025/analising)
-
-### Manual Deployment
-
-1. **Install Vercel CLI** (if not already installed):
-```bash
-npm install -g vercel
+```
+Email: test@financeiq.com
+Password: test123
 ```
 
-2. **Login to Vercel**:
-```bash
-vercel login
-```
-
-3. **Deploy**:
-```bash
-vercel
-```
-
-4. **Set Environment Variables** in Vercel Dashboard:
-   - Go to your project settings
-   - Navigate to "Environment Variables"
-   - Add the following variables:
-     - `NEXT_PUBLIC_SUPABASE_URL`
-     - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-     - `SUPABASE_SERVICE_ROLE_KEY`
-
-5. **Production Deployment**:
-```bash
-vercel --prod
-```
-
-### Custom Domain Setup
-
-1. Go to your Vercel project dashboard
-2. Navigate to "Settings" → "Domains"
-3. Add your custom domain
-4. Follow Vercel's instructions to configure DNS
-
-## 📊 Dashboard Tabs
-
-### 1. Overview
-- Executive summary
-- Key financial metrics cards
-- Revenue and profit margin trends
-- Segment performance treemap
-
-### 2. Financial Metrics
-- Detailed ratio analysis
-- 6 comprehensive charts covering all major financial indicators
-- Year-over-year comparisons
-
-### 3. Segment Analysis
-- Interactive treemap visualization
-- Detailed segment breakdown
-- Growth rates and margins by segment
-
-### 4. AI Insights
-- Sentiment analysis (positive/neutral/negative)
-- Key themes extraction
-- Forward-looking statements
-- Risk and opportunity identification
-
-## 🎨 Design Features
-
-- **Glassmorphism Effects**: Modern, translucent card designs
-- **Gradient Text**: Eye-catching aurora gradients
-- **Smooth Animations**: Fade-in and slide-in effects
-- **Custom Scrollbar**: Styled to match the theme
-- **Hover Effects**: Interactive elements with glow effects
-- **Responsive Grid**: Adapts to all screen sizes
-
-## 📁 Project Structure
+## 📁 Proje Yapısı
 
 ```
 financial-dashboard/
 ├── app/
-│   ├── globals.css          # Global styles and design system
-│   ├── layout.tsx            # Root layout
-│   └── page.tsx              # Main dashboard page
+│   ├── login/              # Login sayfası
+│   ├── dashboard/          # Dashboard sayfası (protected)
+│   ├── globals.css         # Global stiller
+│   ├── layout.tsx          # Root layout
+│   └── page.tsx            # Ana sayfa (redirect)
 ├── components/
-│   ├── FinancialMetricsChart.tsx  # Reusable chart component
-│   ├── SegmentTreemap.tsx         # Treemap visualization
-│   ├── MetricCard.tsx             # Metric display cards
-│   └── InsightsPanel.tsx          # AI insights display
+│   ├── Sidebar.tsx         # Navigasyon sidebar
+│   ├── Overview.tsx        # Genel bakış sekmesi
+│   ├── Metrics.tsx         # Finansal metrikler sekmesi
+│   ├── Segments.tsx        # Segment analizi sekmesi
+│   └── AIInsights.tsx      # AI içgörüler sekmesi
 ├── lib/
-│   ├── supabase.ts           # Supabase client
-│   └── mockData.ts           # Sample financial data
-├── types/
-│   └── financial.ts          # TypeScript interfaces
-└── public/                   # Static assets
+│   └── supabase.ts         # Supabase client
+├── middleware.ts           # Route protection
+└── README.md
 ```
 
-## 🔧 Configuration
+## 🛠️ Teknolojiler
 
-### Tailwind CSS
-The project uses Tailwind CSS v4 with custom design tokens defined in `globals.css`:
-- Custom color palette
-- Gradient definitions
-- Shadow utilities
-- Animation keyframes
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Authentication**: Supabase Auth
+- **Database**: Supabase PostgreSQL
+- **Charts**: Recharts
+- **Styling**: CSS Modules + Global CSS
+- **Icons**: Lucide React
 
-### Supabase Integration
-The dashboard is configured to work with Supabase for:
-- PDF document storage
-- Financial data retrieval
-- Real-time updates (future feature)
+## 🔒 Güvenlik Özellikleri
 
-## 📝 Future Enhancements
+1. **Middleware Protection**: Dashboard sayfaları middleware ile korunur
+2. **Session Validation**: Her istekte session kontrolü
+3. **Automatic Redirect**: Yetkisiz erişimlerde otomatik yönlendirme
+4. **Secure Logout**: Tam session temizleme
 
-- [ ] PDF upload and automatic data extraction
-- [ ] Real-time data updates from Supabase
-- [ ] Export dashboard as PDF report
-- [ ] Comparison with industry benchmarks
-- [ ] Multi-company analysis
-- [ ] Historical data comparison
-- [ ] Custom date range selection
-- [ ] Advanced filtering options
+## 📊 Dashboard Metrikleri
 
-## 🤝 Contributing
+### Finansal Veriler
+- **Toplam Gelir**: $85.0M
+- **EBITDA**: $24.0M
+- **Net Kar**: $16.2M (+20%)
+- **EPS**: $8.10 (+20%)
+- **ROCE**: 26.3%
+- **Borç/Özkaynak**: 0.22
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+### Segment Performansı
+1. **Consulting Services**: $35M gelir, %18 büyüme, %28 kar marjı
+2. **Cloud Infrastructure**: $30M gelir, %25 büyüme, %32 kar marjı
+3. **Data Analytics**: $20M gelir, %15 büyüme, %24 kar marjı
 
-## 📄 License
+## 🎯 Kullanım
 
-This project is licensed under the MIT License.
+1. **Login**: Test kullanıcısı ile giriş yapın
+2. **Dashboard**: Otomatik olarak genel bakış sekmesine yönlendirilirsiniz
+3. **Navigasyon**: Sol sidebar'dan farklı sekmelere geçiş yapın
+4. **Logout**: Sidebar'ın altındaki "Çıkış Yap" butonuna tıklayın
 
-## 🙏 Acknowledgments
+## 🧪 Test Edildi
 
-- Built with [Next.js](https://nextjs.org/)
-- Charts powered by [Recharts](https://recharts.org/)
-- Database by [Supabase](https://supabase.com/)
-- Deployed on [Vercel](https://vercel.com/)
+✅ Login işlevi
+✅ Dashboard erişimi
+✅ Tüm sekmeler (4/4)
+✅ Grafik görselleştirmeleri
+✅ Logout işlevi
+✅ Route protection
+✅ Responsive tasarım
 
-## 📧 Contact
+## 📝 Notlar
 
-For questions or support, please open an issue on GitHub.
+- Dashboard verileri statik mock data kullanır
+- Gerçek bir üretim ortamında, bu veriler bir API'den çekilmelidir
+- Supabase credentials production'da environment variables olarak saklanmalıdır
+
+## 🚀 Production Deployment
+
+1. **Environment Variables Oluşturun:**
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+2. **Build:**
+```bash
+npm run build
+```
+
+3. **Start:**
+```bash
+npm start
+```
+
+## 📄 Lisans
+
+Bu proje demo amaçlı oluşturulmuştur.
+
+## 🤝 Katkıda Bulunma
+
+1. Fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit edin (`git commit -m 'Add amazing feature'`)
+4. Push edin (`git push origin feature/amazing-feature`)
+5. Pull Request açın
 
 ---
 
-**Made with ❤️ using Next.js and TypeScript**
+**Geliştirici**: AI-Powered Development
+**Versiyon**: 1.0.0
+**Son Güncelleme**: 3 Ocak 2025
